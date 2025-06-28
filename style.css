@@ -1,0 +1,123 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Barlow Semi Condensed", sans-serif;
+   min-height: 100vh;
+   background-color: #edf2f8;
+   display: grid;
+   place-items: center;
+   font-size: 0.825rem;
+   line-height: 1.3;
+}
+
+.testimonials-grid {
+   width: 75%;
+   height: 70%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.85rem;
+   grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+}
+
+.testimonial-card {
+   /* border: solid 1px #202430; */
+   border-radius: 0.5rem;
+   box-shadow: 2rem 2rem 5rem -1rem hsl(224, 10%, 45%);
+   padding: 1rem 2rem;
+   display: grid;
+   grid-template-rows: auto auto auto;
+   justify-content: space-between;
+   font-size: 0.8rem;
+}
+
+.user-info {
+   display: inline-grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   gap: 1rem;
+}
+.name {
+   font-size: 0.75rem;
+   font-weight: 500;
+}
+.user-info img {
+   border-radius: 50%;
+   width: 32px;
+   height: auto;
+}
+
+.short-p {
+   font-size: 1.2rem;
+   font-weight: 600;
+   line-height: 1.2;
+}
+
+.daniel {
+   grid-area: daniel;
+   background-color: #6c43bf;
+   color: #c6cbd5;
+   background-image: url(./images/bg-pattern-quotation.svg);
+   background-repeat: no-repeat;
+   background-position: top 0rem right 4.5rem;
+   background-size: auto;
+}
+.daniel img {
+   border: solid 1px hsl(264, 82%, 80%);
+}
+
+.jonathan {
+   grid-area: jonathan;
+   background-color: #4d5569;
+   color: #c6cbd5;
+}
+
+.jeanette {
+   grid-area: jeanette;
+   background-color: ffffff;
+   color: hsl(217, 19%, 35%);
+}
+
+.patrick {
+   grid-area: patrick;
+   background-color: hsl(219, 29%, 14%);
+   color: #c6cbd5;
+}
+.patrick img {
+   border: solid 1px hsl(263, 55%, 52%);
+}
+
+.kira {
+   grid-area: kira;
+   background-color: ffffff;
+   color: hsl(217, 19%, 35%);
+}
+
+@media screen and (max-width: 768px) {
+   .testimonials-grid {
+      display: grid;
+      width: 90%;
+      height: 95%;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "daniel"
+         "jonathan"
+         "jeanette"
+         "patrick"
+         "kira";
+   }
+   .testimonial-card {
+      display: grid;
+      grid-template-rows: auto;
+      gap: 1rem;
+      padding: 2rem;
+   }
+   .daniel {
+      background-image: none;
+   }
+}
