@@ -65,6 +65,10 @@ body {
    line-height: 1.2;
 }
 
+.user-info p {
+   font-size: 0.65rem;
+}
+
 /*! Each card with its username and bg as class name, |-can be changed later-|  */
 
 /*? ---------- Reuseable card style with White bg ----------  */
@@ -95,10 +99,10 @@ body {
 
 .violet-bg {
    background-color: #6c43bf;
-   color: #c6cbd5;
+   color: hsl(0, 0%, 100%);
    background-image: url(./images/bg-pattern-quotation.svg);
    background-repeat: no-repeat;
-   background-position: top 0rem right 4.5rem;
+   background-position: top 0rem right 4rem;
    background-size: auto;
 }
 
